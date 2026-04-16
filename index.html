@@ -7,11 +7,30 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div id="login-overlay" class="login-overlay">
+    <div class="login-card">
+      <h2>تسجيل الدخول</h2>
+      <p>يرجى إدخال اسم المستخدم وكلمة المرور للدخول إلى النظام.</p>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="login-username">اسم المستخدم</label>
+          <input type="text" id="login-username" required />
+        </div>
+        <div class="form-group">
+          <label for="login-password">كلمة المرور</label>
+          <input type="password" id="login-password" required />
+        </div>
+        <button type="submit">دخول</button>
+        <div id="login-error" class="error-message"></div>
+      </form>
+    </div>
+  </div>
+
   <div class="container">
     <div class="page-header">
       <div class="brand">
         <div class="brand-logo">
-          <img src="Logo.png" alt="Full Mark Academy Logo">
+          <img src="Logo.png.jpeg" alt="Full Mark Academy Logo">
         </div>
         <div class="brand-text">
           <span class="brand-pretitle">أكاديمية</span>
@@ -19,6 +38,7 @@
         </div>
       </div>
       <p class="brand-subtitle">More than just success</p>
+      <button type="button" id="logout-button" class="logout-button" style="display:none;">تسجيل خروج</button>
     </div>
 
     <div class="main-content">
@@ -120,8 +140,8 @@
               <input type="number" id="book-price" name="bookPrice" min="0" step="0.01" required />
             </div>
             <div class="form-group half">
-              <label for="presence">الحضور (اختياري)</label>
-              <select id="presence" name="presence">
+              <label for="presence">الحضور</label>
+              <select id="presence" name="presence" required>
                 <option value="">اختر الحالة</option>
                 <option value="حاضر">حاضر</option>
                 <option value="غائب">غائب</option>
@@ -142,17 +162,6 @@
               <label><input type="checkbox" name="subjects" value="فيزياء" /> فيزياء</label>
               <label><input type="checkbox" name="subjects" value="كيمياء" /> كيمياء</label>
               <label><input type="checkbox" name="subjects" value="يوسي ماث" /> يوسي ماث</label>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group half">
-              <label for="attendance">نسبة الحضور (%)</label>
-              <input type="number" id="attendance" name="attendance" min="0" max="100" required />
-            </div>
-            <div class="form-group half">
-              <label for="absent-days">أيام الغياب</label>
-              <input type="number" id="absent-days" name="absentDays" min="0" required />
             </div>
           </div>
 
