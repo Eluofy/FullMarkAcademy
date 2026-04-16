@@ -1,4 +1,4 @@
-[styles.css.css](https://github.com/user-attachments/files/26781034/styles.css.css)
+[styles.css](https://github.com/user-attachments/files/26781034/styles.css.css)
 * {
   box-sizing: border-box;
 }
